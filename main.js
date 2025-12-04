@@ -323,7 +323,7 @@ let isStartedTypingFirstNumber = false;
 let isDivideByZeroError = false;
 let isDecimal = false;
 let displayDiv = document.querySelector("#display");
-let body = document.getElementsByTagName("body")[0];
+
 
 // Add click listener to all buttons. Change color on mousedown and mouse up
 
@@ -381,75 +381,167 @@ document.querySelector(".button.divide").addEventListener("click", DivideLogic);
 window.addEventListener("keydown", e => {
     if((e.code == "Digit1" || e.code == "Numpad1") && !e.shiftKey && !e.altKey && !e.ctrlKey){
         PopulateDisplayWithNumber(e, "1");
+        Array.from(buttons).find(button => button.textContent == "1").style.backgroundColor = "#d1d1d1ff";
     }
 
     else if((e.code == "Digit2" || e.code == "Numpad2") && !e.shiftKey && !e.altKey && !e.ctrlKey){
         PopulateDisplayWithNumber(e, "2");
+        Array.from(buttons).find(button => button.textContent == "2").style.backgroundColor = "#d1d1d1ff";
     }
 
     else if((e.code == "Digit3" || e.code == "Numpad3") && !e.shiftKey && !e.altKey && !e.ctrlKey){
         PopulateDisplayWithNumber(e, "3");
+        Array.from(buttons).find(button => button.textContent == "3").style.backgroundColor = "#d1d1d1ff";
     }
 
     else if((e.code == "Digit4" || e.code == "Numpad4") && !e.shiftKey && !e.altKey && !e.ctrlKey){
         PopulateDisplayWithNumber(e, "4");
+        Array.from(buttons).find(button => button.textContent == "4").style.backgroundColor = "#d1d1d1ff";
     }
 
     else if((e.code == "Digit5" || e.code == "Numpad5") && !e.shiftKey && !e.altKey && !e.ctrlKey){
         PopulateDisplayWithNumber(e, "5");
+        Array.from(buttons).find(button => button.textContent == "5").style.backgroundColor = "#d1d1d1ff";
     }
 
     else if((e.code == "Digit6" || e.code == "Numpad6") && !e.shiftKey && !e.altKey && !e.ctrlKey){
         PopulateDisplayWithNumber(e, "6");
+        Array.from(buttons).find(button => button.textContent == "6").style.backgroundColor = "#d1d1d1ff";
     }
 
     else if((e.code == "Digit7" || e.code == "Numpad7")&& !e.shiftKey && !e.altKey && !e.ctrlKey){
         PopulateDisplayWithNumber(e, "7");
+        Array.from(buttons).find(button => button.textContent == "7").style.backgroundColor = "#d1d1d1ff";
     }
 
     else if((e.code == "Digit8" || e.code == "Numpad8") && !e.shiftKey && !e.altKey && !e.ctrlKey){
         PopulateDisplayWithNumber(e, "8");
+        Array.from(buttons).find(button => button.textContent == "8").style.backgroundColor = "#d1d1d1ff";
     }
 
     else if((e.code == "Digit9" || e.code == "Numpad9") && !e.shiftKey && !e.altKey && !e.ctrlKey){
         PopulateDisplayWithNumber(e, "9");
+        Array.from(buttons).find(button => button.textContent == "9").style.backgroundColor = "#d1d1d1ff";
     }
 
     else if((e.code == "Digit0" || e.code == "Numpad0") && !e.shiftKey && !e.altKey && !e.ctrlKey){
         PopulateDisplayWithNumber(e, "0");
+        Array.from(buttons).find(button => button.textContent == "0").style.backgroundColor = "#d1d1d1ff";
     }
 
     else if(e.code == "Backspace"){
         DeleteLogic(e);
+        Array.from(buttons).find(button => button.textContent == "Delete").style.backgroundColor = "#d1d1d1ff";
     }
 
     else if(e.code == "NumpadAdd" || e.key == "+"){
         AddLogic(e, "+");
+        Array.from(buttons).find(button => button.textContent == "+").style.backgroundColor = "#d1d1d1ff";
     }
 
     else if(e.code == "NumpadSubtract" || e.key == "-"){
         SubtractLogic(e, "-");
+        Array.from(buttons).find(button => button.textContent == "-").style.backgroundColor = "#d1d1d1ff";
     }
 
     else if(e.code == "NumpadMultiply" || e.key == "*"){
         MultiplyLogic(e, "*");
+        Array.from(buttons).find(button => button.textContent == "*").style.backgroundColor = "#d1d1d1ff";
     }
 
     else if(e.code == "NumpadDivide" || e.key == "/"){
         DivideLogic(e, "/");
+        Array.from(buttons).find(button => button.textContent == "/").style.backgroundColor = "#d1d1d1ff";
     }
 
     else if(e.code == "Delete"){
         ClearEverything();
+        Array.from(buttons).find(button => button.textContent == "Clear").style.backgroundColor = "#d1d1d1ff";
     }
 
-    else if(e.code == "Enter" || e.code == "NumpadEnter"){
+    else if(e.code == "Enter" || e.code == "NumpadEnter" || e.key == "="){
         EqualsLogic(e);
+        Array.from(buttons).find(button => button.textContent == "=").style.backgroundColor = "#d1d1d1ff";
     }
 
-    else if(e.code == "NumpadDecimal" || e.code == "Period" || e.code == "Comma"){
+    else if(e.code == "NumpadDecimal" || e.key == "." || e.key == "," || e.code == "Comma" || e.code == "Period"){
         DecimalLogic(e, ".");
+        Array.from(buttons).find(button => button.textContent == ".").style.backgroundColor = "#d1d1d1ff";
     }
 
     
+})
+
+window.addEventListener("keyup", e => {
+        if((e.code == "Digit1" || e.code == "Numpad1") && !e.shiftKey && !e.altKey && !e.ctrlKey){
+        Array.from(buttons).find(button => button.textContent == "1").style.backgroundColor = "#eeeeee";
+    }
+
+    else if((e.code == "Digit2" || e.code == "Numpad2") && !e.shiftKey && !e.altKey && !e.ctrlKey){
+        Array.from(buttons).find(button => button.textContent == "2").style.backgroundColor = "#eeeeee";
+    }
+
+    else if((e.code == "Digit3" || e.code == "Numpad3") && !e.shiftKey && !e.altKey && !e.ctrlKey){
+        Array.from(buttons).find(button => button.textContent == "3").style.backgroundColor = "#eeeeee";
+    }
+
+    else if((e.code == "Digit4" || e.code == "Numpad4") && !e.shiftKey && !e.altKey && !e.ctrlKey){
+        Array.from(buttons).find(button => button.textContent == "4").style.backgroundColor = "#eeeeee";
+    }
+
+    else if((e.code == "Digit5" || e.code == "Numpad5") && !e.shiftKey && !e.altKey && !e.ctrlKey){
+        Array.from(buttons).find(button => button.textContent == "5").style.backgroundColor = "#eeeeee";
+    }
+
+    else if((e.code == "Digit6" || e.code == "Numpad6") && !e.shiftKey && !e.altKey && !e.ctrlKey){
+        Array.from(buttons).find(button => button.textContent == "6").style.backgroundColor = "#eeeeee";
+    }
+
+    else if((e.code == "Digit7" || e.code == "Numpad7")&& !e.shiftKey && !e.altKey && !e.ctrlKey){
+        Array.from(buttons).find(button => button.textContent == "7").style.backgroundColor = "#eeeeee";
+    }
+
+    else if((e.code == "Digit8" || e.code == "Numpad8") && !e.shiftKey && !e.altKey && !e.ctrlKey){
+        Array.from(buttons).find(button => button.textContent == "8").style.backgroundColor = "#eeeeee";
+    }
+
+    else if((e.code == "Digit9" || e.code == "Numpad9") && !e.shiftKey && !e.altKey && !e.ctrlKey){
+        Array.from(buttons).find(button => button.textContent == "9").style.backgroundColor = "#eeeeee";
+    }
+
+    else if((e.code == "Digit0" || e.code == "Numpad0") && !e.shiftKey && !e.altKey && !e.ctrlKey){
+        Array.from(buttons).find(button => button.textContent == "0").style.backgroundColor = "#eeeeee";
+    }
+
+    else if(e.code == "Backspace"){
+        Array.from(buttons).find(button => button.textContent == "Delete").style.backgroundColor = "#eeeeee";
+    }
+
+    else if(e.code == "NumpadAdd" || e.key == "+"){
+        Array.from(buttons).find(button => button.textContent == "+").style.backgroundColor = "#eeeeee";
+    }
+
+    else if(e.code == "NumpadSubtract" || e.key == "-"){
+        Array.from(buttons).find(button => button.textContent == "-").style.backgroundColor = "#eeeeee";
+    }
+
+    else if(e.code == "NumpadMultiply" || e.key == "*"){
+        Array.from(buttons).find(button => button.textContent == "*").style.backgroundColor = "#eeeeee";
+    }
+
+    else if(e.code == "NumpadDivide" || e.key == "/"){
+        Array.from(buttons).find(button => button.textContent == "/").style.backgroundColor = "#eeeeee";
+    }
+
+    else if(e.code == "Delete"){
+        Array.from(buttons).find(button => button.textContent == "Clear").style.backgroundColor = "#eeeeee";
+    }
+
+    else if(e.code == "Enter" || e.code == "NumpadEnter" || e.key == "="){
+        Array.from(buttons).find(button => button.textContent == "=").style.backgroundColor = "#eeeeee";
+    }
+
+    else if(e.code == "NumpadDecimal" || e.key == "." || e.key == "," || e.code == "Comma" || e.code == "Period"){
+        Array.from(buttons).find(button => button.textContent == ".").style.backgroundColor = "#eeeeee";
+    }
 })
