@@ -34,6 +34,7 @@ body{
 
 .long{
     flex-grow: 1;
+    height: 80px;
 }
 
 #display{
@@ -52,7 +53,7 @@ body{
 
 #calculator{
     width: 600px;
-    height: 750px;
+    height: 800px;
     background-color: rgb(185, 185, 185);
     border-radius: 25px;
     margin-top: 50px;
